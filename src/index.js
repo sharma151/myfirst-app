@@ -1,26 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
-const date = new Date(2022, 1, 1, 10);
-const currentTime = date.getHours();
-let customStyle = {
-  color: "",
-};
-let greeting;
-if (currentTime <= 12) {
-  greeting = "GoodMorning";
-  customStyle.color = "red";
-} else if (currentTime < 18) {
-  greeting = "GoodAfternoon";
-  customStyle.color = "green";
-} else {
-  greeting = "GoodNight";
-  customStyle.color = "blue";
-}
+// import App from "./app";
+import { add, multiply, subtract, divide } from "./calculator";
 
 ReactDOM.render(
-  <div>
-    <h1 style={customStyle}>{greeting}</h1>
-  </div>,
+  <ul>
+    <li>{add(1, 2)}</li>
+    <li>{multiply(2, 3)}</li>
+    <li>{subtract(7, 2)}</li>
+    <li>{divide(5, 2)}</li>
+  </ul>,
   document.getElementById("root")
 );
